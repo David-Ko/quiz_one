@@ -1,0 +1,15 @@
+<%- include("./partials/header") %>
+
+<% if (username) { %>
+<h1>welcome, <%= username%></h1>
+<form action="/signout" method = "post">
+<input type="submit" value="sign out">
+</form>
+
+<% } else {%>
+
+<h1>Welcome to Cluckr</h1>
+
+<% } %>
+
+<%- include("./partials/footer") %>

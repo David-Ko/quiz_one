@@ -1,0 +1,30 @@
+{
+  "name": "quiz_one",
+  "version": "0.0.1",
+  "description": "quiz_one",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/David-Ko/quiz_one.git"
+  },
+  "author": "David Ko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/David-Ko/quiz_one/issues"
+  },
+  "homepage": "https://github.com/David-Ko/quiz_one#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "knex": "^0.15.2",
+    "morgan": "^1.9.1",
+    "pg": "^7.7.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.7"
+  }
+}
