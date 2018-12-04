@@ -3,61 +3,10 @@
 <% for (let cluck of clucks){%>
 
 <div class="jumbotron">
-  <!--<h1 class="display-4">Content</h1>-->
-
-  <p class="lead"><%= cluck.username%></p>
-  <p class="lead"><%= cluck.createdAt%></p>
   <p class="lead"><%= cluck.content%></p>
-  <!--
-  <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  -->
-  </div>
-
-
-
-
-
-
-
-
-
-<!--
-<div class="form-group">
-    <label for="exampleFormControlTextarea1">Content</label>
-    <blockquote class="blockquote">
-    <p class="mb-0"><%=cluck.content %></p>
-    </blockquote>
-    <label for="exampleFormControlTextarea1">Image Url</label>
-    <blockquote class="blockquote">
-    <p class="mb-0"><%=cluck.image_url %></p>
-    </blockquote>
-    <label for="exampleFormControlTextarea1">Cluck ID</label>
-    <blockquote class="blockquote">
-    <p class="mb-0"><%=cluck.id %></p>
-    </blockquote>
+  <p class="lead"><%= cluck.img_url%></p>
+  <p class="lead"><%= cluck.createdAt%></p>
 </div>
--->
-
-
-<!--
-    <div class="form-group">
-    <label for="exampleFormControlTextarea1">Content</label>
-    <textarea class="form-control" name = "content" id="exampleFormControlTextarea1" rows="3"><%=cluck.content %></textarea>
-    </div>
-    <div class="form-group">
-    <label for="exampleFormControlInput1">Image UrL</label>
-    <input type="text" class="form-control" name = "image_url" id="exampleFormControlInput1" ><%=cluck.content %>
-    </div>
--->
-<!--
-    <p>Your cluck logo: <%=cluck.logoUrl %> </p>
-    <p>Your cluck id: <%=cluck.id %> </p>
-    <p>Your cluck content:<%=cluck.content %>  </p>
--->
-<%}%> 
-
-
-
+<%}%>
 
 <%- include('./partials/footer') %>

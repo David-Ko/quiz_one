@@ -10,15 +10,7 @@ app.use(logger("dev"));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true}));
 app.use(express.static(path.join(__dirname, "public")));
-//Below is for method-override
-// app.use(
-//     methodOverride((req,res)=>{      
-//         if(req.body && req.body._method){
-//             const method = req.body._method;
-//             return method;
-//         }
-//     })
-// );
+
 
 const baseRouter = require("./routes/base.js")
 app.use('/', baseRouter);
@@ -32,7 +24,17 @@ app.use('/', baseRouter);
 const clucksRouter = require("./routes/clucks.js");
 app.use('/clucks', clucksRouter);
 
+app.use((req, res, next) => {
+console.log("Cookies:", req.cookies);
 
+const username = req.cookies.username;
+res.locals.username = "";
+if (username) {
+    res.locals.username = username;
+    console.log(`Signed in as ${username}`);
+}
+next();
+});
 
 const PORT = 5004;
 const HOST = 'localhost'

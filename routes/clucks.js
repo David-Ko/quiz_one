@@ -31,12 +31,13 @@ router.post('/', (req, res)=>{  //coming from new.ejs
 });
 
 router.get('/index', (req, res)=>{
+    const username = req.cookies.username
     knex   
         .select("*")
         .from("cluckrs")
-        .orderBy('id', 'desc')
+        .orderBy('createdAt', 'desc')
         .then((clucks)=>{
-            res.render('index', { clucks })
+            res.render('index', { clucks , username  })
         })
 })
 

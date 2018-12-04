@@ -7,20 +7,17 @@ router.get("/", (req, res)=>{
     res.render('homePage', {username})
 });
 
-router.get('/signin', (req, res)=>{
-    res.render('signIn')
+const COOKIE_MAX_AGE = 1000 * 60 * 60 * 24 * 7; // A week in milliseconds
+router.post("/sign_in", (req, res) => {
+  const username = req.body.username;
+  res.cookie("username", username, { maxAge: COOKIE_MAX_AGE });
+  res.redirect("/");
 });
 
-router.post('/signin', (req, res)=>{
-    const username = req.body.username;
-    res.cookie('username', username)
-    res.redirect('/')
+router.post("/sign_out", (req, res) => {
+  res.clearCookie("username");
+  res.redirect("/");
 });
-
-router.post('/signout', (req, res)=>{
-    res.clearCookie("username"); //but where's the value of "username" coming from?
-    res.redirect("/");
-})
 
 
 
