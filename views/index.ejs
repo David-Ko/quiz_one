@@ -1,0 +1,12 @@
+<%- include('./partials/header') %>
+    <% for (let cluck of clucks){%>
+        <div class="jumbotron">
+            <p class="lead">User: <%= cluck.username%></p>
+            <p class="lead"><%= cluck.content%></p>
+            <% if (cluck.image_url) { %>
+            <img id = "image_url" src="<%= cluck.image_url%>">
+            <% }%>
+            <p class="lead"><%= cluck.createdAt%></p>
+        </div>
+    <%}%>
+<%- include('./partials/footer') %>

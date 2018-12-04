@@ -1,0 +1,9 @@
+.welcome-image {
+    border-radius: 10px;
+    max-height: 500px;
+}
+
+#image_url{
+    max-width: 100px;
+    max-height: 100px;
+}

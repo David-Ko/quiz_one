@@ -1,0 +1,15 @@
+<%- include('./partials/header') %>
+  <form action = "/clucks" method="post">
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Content</label>
+      <textarea class="form-control" name = "content" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Image UrL</label>
+      <input type="text" class="form-control" name = "image_url" id="exampleFormControlInput1" >
+    </div>
+    <div>
+      <input class="btn btn-primary" type="submit" value="Submit">
+    </div>
+  </form>
+<%- include('./partials/footer') %>
