@@ -1,12 +1,9 @@
 <%- include('./partials/header') %>
-
-<% for (let cluck of clucks){%>
-
-<div class="jumbotron">
-  <p class="lead"><%= cluck.content%></p>
-  <p class="lead"><%= cluck.img_url%></p>
-  <p class="lead"><%= cluck.createdAt%></p>
-</div>
-<%}%>
-
+    <% for (let cluck of clucks){%>
+        <div class="jumbotron">
+            <p class="lead"><%= cluck.content%></p>
+            <p class="lead"><%= cluck.image_url%></p>
+            <p class="lead"><%= cluck.createdAt%></p>
+        </div>
+    <%}%>
 <%- include('./partials/footer') %>

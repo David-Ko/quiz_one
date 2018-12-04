@@ -11,19 +11,6 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true}));
 app.use(express.static(path.join(__dirname, "public")));
 
-
-const baseRouter = require("./routes/base.js")
-app.use('/', baseRouter);
-//The above two lines replace the 3 lines below
-// app.get('/', (req,res)=>{
-//     res.send('hi')
-// });
-
-
-
-const clucksRouter = require("./routes/clucks.js");
-app.use('/clucks', clucksRouter);
-
 app.use((req, res, next) => {
 console.log("Cookies:", req.cookies);
 
@@ -35,6 +22,16 @@ if (username) {
 }
 next();
 });
+
+const baseRouter = require("./routes/base.js")
+app.use('/', baseRouter);
+//The above two lines replace the 3 lines below
+// app.get('/', (req,res)=>{
+//     res.send('hi')
+// });
+
+const clucksRouter = require("./routes/clucks.js");
+app.use('/clucks', clucksRouter);
 
 const PORT = 5004;
 const HOST = 'localhost'
