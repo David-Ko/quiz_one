@@ -26,17 +26,17 @@
              <!-- <%= username %>-->
             </span>
             <li class="nav-item">
-            <a class="nav-link" href="/clucks/new">New Cluck</a>
+            <a class="nav-link" href="/clucks/new">cluck_master</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="/clucks/index">All Clucks</a>
+            <a class="nav-link" href="/clucks/index">Cluck!</a>
             </li>
             <form action="/sign_out" method="POST" class="form-inline">
               <button class="btn btn-outline-light" type="submit">Sign Out</button>
             </form>
           <% } else { %>
             <li class="nav-item">
-            <a class="nav-link" href="/clucks/index">All Clucks</a>
+            <a class="nav-link" href="/clucks/index">Cluck!</a>
             </li>
             <form action="/sign_in" method="POST" class="form-inline">
               <input class="form-control mr-2" name="username" placeholder="Username">
